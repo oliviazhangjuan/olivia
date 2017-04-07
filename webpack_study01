@@ -1,0 +1,10 @@
+CommonJs是应用在NodeJs，是一种同步的模块机制：
+  var firstModule = require("firstModule");
+  //your code...
+  module.export = anotherModule
+AMD的应用场景则是浏览器，异步加载的模块机制：
+  define(['firstModule'], function(module){
+      //your code...
+      return anotherModule
+  })  
+任何静态资源都可以视作模块，然后模块之间也可以相互依赖，通过webpack对模块进行处理后，可以打包成我们想要的静态资源  
